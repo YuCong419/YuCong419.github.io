@@ -1,50 +1,66 @@
-# Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+
+# ==========================================
+# Personal Academic Homepage - Yu Cong
+# Powered by Minimal Light
+# ==========================================
+
+# Basic Information
+title: Yu Cong
+position: M.Eng. Student in Control Engineering
+affiliation: Soochow University, China
+
+# 请替换为你希望公开的学术邮箱
+email: yc1683654@gmail.com
 
 # Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: >-
+  Yu Cong, Soochow University, Robotics,
+  Embodied AI, Robot Perception,
+  Visual SLAM, Semantic SLAM,
+  3D Scene Graph, Scene Understanding,
+  Spatiotemporal Memory,
+  Long-term Robot Memory,
+  Dynamic Environments
 
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
+description: >-
+  Yu Cong is a Master's student in Control
+  Engineering at Soochow University, China.
+  His research focuses on embodied AI,
+  robot perception, 3D scene understanding,
+  dynamic scene representation,
+  and long-term spatiotemporal memory
+  for autonomous mobile robots.
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+canonical: https://yucong419.github.io/
+
+# Academic and Social Links
+github_link: https://github.com/YuCong419
+
+# 暂无对应账号或文件时，不启用以下链接
+# google_scholar:
+# cv_link:
+# linkedin:
+# twitter:
+
+# Profile Images
+# 后续替换为你自己的头像
 avatar: ./assets/img/avatar.png
+
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+# Website Appearance
 enable_footnote: true
-
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
 auto_dark_mode: true
 
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
+# Serif: 学术经典字体
+# Sans Serif: 更现代、简洁的字体
+font: "Sans Serif"
 
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
-
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+# Theme
 remote_theme: yaoyao-liu/minimal-light
 
-# The following files will be removed from the generated website.
+# Excluded Files
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -55,3 +71,4 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
+
