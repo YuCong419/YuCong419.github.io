@@ -1,0 +1,22 @@
+{%- assign milestones = site.data.milestones -%}
+{% if milestones and milestones.size > 0 %}
+<section class="home-section" id="milestones" aria-labelledby="milestones-title">
+  <h2 id="milestones-title">{{ t.sections.milestones }}</h2>
+  <ol class="timeline" role="list">
+    {% for milestone in milestones %}
+    <li class="timeline-item">
+      {% if milestone.date and milestone.date != "" %}
+      <span class="timeline-date">{{ milestone.date }}</span>
+      {% endif %}
+      <h3>{{ milestone.title[lang] }}</h3>
+      {% if milestone.description[lang] and milestone.description[lang] != "" %}
+      <p>{{ milestone.description[lang] }}</p>
+      {% endif %}
+      {% if milestone.url and milestone.url != "" %}
+      <a class="inline-link" href="{{ milestone.url }}" target="_blank" rel="noopener">{{ t.labels.related_link }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}

@@ -1,23 +1,10 @@
 ---
 layout: homepage
+lang: en
+title: Yu Cong | Master's Student in Control Engineering
+description: >-
+  Yu Cong is a Master's student in Control Engineering at Soochow University, China.
+  His research focuses on robust visual localization for service robots,
+  robot perception, spatial intelligence, and long-term spatiotemporal memory.
+canonical: https://yucong419.github.io/
 ---
-
-## About Me
-
-I am a Ph.D. student at ...
-
-## Research Interests
-
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
-
-## News
-
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
-
-{% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}

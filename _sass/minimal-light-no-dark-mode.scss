@@ -1,3 +1,20 @@
+/* ==========================================
+   Site design tokens (light mode)
+   ========================================== */
+:root {
+  --site-border: #e3e8ee;
+  --site-surface: #f7f9fc;
+  --site-surface-strong: #eef4fa;
+  --site-muted: #68727f;
+  --site-heading: #043361;
+  --site-accent: #0b6bcb;
+  --site-accent-soft: rgba(11, 107, 203, 0.09);
+  --site-success: #1a7f4b;
+  --site-success-soft: rgba(26, 127, 75, 0.1);
+  --site-warning: #946200;
+  --site-warning-soft: rgba(148, 98, 0, 0.12);
+}
+
 .pub-row {
   display: flex; 
   align-items: center;}

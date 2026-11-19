@@ -1,0 +1,44 @@
+{%- assign publications = site.data.publications -%}
+{% if publications and publications.size > 0 %}
+<section class="home-section" id="publications" aria-labelledby="publications-title">
+  <h2 id="publications-title">{{ t.sections.publications }}</h2>
+  <ol class="pub-list" role="list">
+    {% for publication in publications %}
+    {%- assign title_url = publication.pdf | default: publication.arxiv | default: publication.project_url | default: "" -%}
+    <li class="pub-item">
+      <h3 class="pub-title">
+        {% if title_url != "" %}
+        <a href="{{ title_url }}" target="_blank" rel="noopener">{{ publication.title }}</a>
+        {% else %}
+        {{ publication.title }}
+        {% endif %}
+      </h3>
+      {% if publication.authors and publication.authors != "" %}
+      <p class="pub-authors">{{ publication.authors }}</p>
+      {% endif %}
+      {% if publication.venue and publication.venue != "" or publication.year and publication.year != "" %}
+      <p class="pub-venue">
+        {% if publication.venue and publication.venue != "" %}{{ publication.venue }}{% endif %}
+        {% if publication.venue and publication.venue != "" and publication.year and publication.year != "" %} &middot; {% endif %}
+        {% if publication.year and publication.year != "" %}{{ publication.year }}{% endif %}
+      </p>
+      {% endif %}
+      <div class="pub-links">
+        {% if publication.pdf and publication.pdf != "" %}
+        <a href="{{ publication.pdf }}" target="_blank" rel="noopener">{{ t.labels.pdf }}</a>
+        {% endif %}
+        {% if publication.arxiv and publication.arxiv != "" %}
+        <a href="{{ publication.arxiv }}" target="_blank" rel="noopener">{{ t.labels.arxiv }}</a>
+        {% endif %}
+        {% if publication.project_url and publication.project_url != "" %}
+        <a href="{{ publication.project_url }}" target="_blank" rel="noopener">{{ t.labels.project_page }}</a>
+        {% endif %}
+        {% if publication.code_url and publication.code_url != "" %}
+        <a href="{{ publication.code_url }}" target="_blank" rel="noopener">{{ t.labels.code }}</a>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}

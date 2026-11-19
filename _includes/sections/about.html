@@ -1,0 +1,13 @@
+{%- assign profile = site.data.profile -%}
+<section class="home-section" id="about" aria-labelledby="about-title">
+  <h2 id="about-title">{{ t.sections.about }}</h2>
+  {% for paragraph in profile.about[lang] %}
+  {{ paragraph | markdownify }}
+  {% endfor %}
+  {% if profile.current_topic[lang] and profile.current_topic[lang] != "" %}
+  <div class="current-topic">
+    <span class="current-topic-label">{{ t.labels.current_topic }}</span>
+    <p class="current-topic-text">{{ profile.current_topic[lang] }}</p>
+  </div>
+  {% endif %}
+</section>

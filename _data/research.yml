@@ -1,0 +1,60 @@
+# ==========================================
+# 研究方向（三条主线）
+# 新增方向：复制一条记录并修改内容即可。
+# ==========================================
+
+- title:
+    en: Robot Perception and Spatial Intelligence
+    zh: 机器人感知与空间智能
+  summary:
+    en: >-
+      Perception for embodied and service robots, with an emphasis on robust visual
+      localization in complex indoor environments. The work examines how visual
+      observations are turned into spatial representations that support localization,
+      navigation, and interaction, using ORB-SLAM3 as a baseline.
+    zh: "面向具身机器人与服务机器人的感知研究，重点关注复杂室内环境中的鲁棒视觉定位，以及如何将视觉观测转化为支持定位、导航与交互的空间表征，并以 ORB-SLAM3 作为技术基线。"
+  keywords:
+    en:
+      - Robust visual localization
+      - Visual SLAM
+      - Semantic mapping
+    zh:
+      - 鲁棒视觉定位
+      - 视觉 SLAM
+      - 语义建图
+
+- title:
+    en: Dynamic 3D Scene Understanding
+    zh: 动态三维场景理解
+  summary:
+    en: >-
+      Representing 3D scenes and their changes over time, including object identity
+      association, scene relations, and event-level descriptions of dynamic environments.
+    zh: "研究三维场景及其随时间变化的表征，包括对象身份关联、场景关系与动态环境中的事件描述。"
+  keywords:
+    en:
+      - 3D scene graphs
+      - Object association
+      - Scene representation
+    zh:
+      - 三维场景图
+      - 对象关联
+      - 场景表征
+
+- title:
+    en: Long-term Spatiotemporal Memory
+    zh: 长期时空记忆
+  summary:
+    en: >-
+      Organizing and retrieving long-term spatiotemporal information so that robots
+      can reuse past observations across changes in scene appearance and layout.
+    zh: "研究长期时空信息的组织与检索，使机器人能够在场景外观与布局变化后复用过去的观测经验。"
+  keywords:
+    en:
+      - Long-term memory
+      - Spatiotemporal representation
+      - Memory retrieval
+    zh:
+      - 长期记忆
+      - 时空表征
+      - 记忆检索

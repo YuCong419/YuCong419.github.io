@@ -1,0 +1,119 @@
+# ==========================================
+# 代表性科研项目
+# status 可选值：ongoing / completed / exploratory
+# 可选字段留空（"" 或 []）时，对应内容与按钮会自动隐藏。
+#
+# stages 用于记录经过确认的阶段成果，初始为空。
+# 唯一上游：独立科研仓库 robust-visual-localization 的 outcomes/approved/
+# （review.status: approved 且 publish.homepage: true）。
+# 不要在此直接写入未审核结果；同步步骤见 MAINTENANCE.md。
+# 只有真实、经过验证的结果才写入；日常代码提交不等于科研成果。
+# 可用的 category：
+#   baseline_evaluation / failure_case_analysis / frontend_improvements /
+#   backend_relocalization / robustness_experiments / reproducible_release
+# stage 可选字段：
+#   category, date, title{en,zh}, summary{en,zh}, scene{en,zh},
+#   algorithm_version, config, baselines[], metrics[], figure,
+#   video_url, repo_url, code_version, release_url, cv_description{en,zh}
+# ==========================================
+
+- id: robust-visual-localization
+  status: ongoing
+  period: ""
+  baseline: "ORB-SLAM3"
+  title:
+    en: Robust Visual Localization for Commercial Cleaning Robots
+    zh: 面向商用清洁机器人的鲁棒视觉定位研究
+  summary:
+    en: >-
+      Ongoing research on robust visual localization for commercial cleaning robots,
+      using ORB-SLAM3 as a baseline. The work analyzes localization degradation in
+      complex indoor environments and investigates front-end, back-end, and system-level
+      strategies to improve localization stability, tracking recovery, and engineering
+      applicability. The listed directions describe the research scope; implemented
+      improvements and quantitative results will be reported only after verification.
+    zh: "面向商用清洁机器人的在研课题，以 ORB-SLAM3 作为技术基线，分析复杂室内环境中的视觉定位退化问题，并研究视觉前端、后端与系统级定位改进策略，以提升定位稳定性、失跟恢复能力与工程适用性。所列内容为研究范围，已实现的改进与量化结果将在验证后补充。"
+  application:
+    en: "Commercial cleaning robots in complex indoor environments"
+    zh: "复杂室内环境中的商用清洁机器人"
+  highlights:
+    en:
+      - Analysis of visual localization degradation in complex indoor environments
+      - Localization robustness in texture-poor and repetitive-structure environments
+      - Effects of illumination changes, motion blur, and dynamic occlusions
+      - Feature extraction, tracking, and matching optimization in the visual front end
+      - Back-end constraints, robust optimization, and relocalization strategies
+      - Localization reliability evaluation for commercial service robots
+    zh:
+      - 复杂室内环境下的视觉定位退化分析
+      - 弱纹理和重复结构环境下的定位鲁棒性
+      - 光照变化、运动模糊和动态遮挡影响
+      - 视觉前端的特征提取、跟踪与匹配优化研究
+      - 后端约束、鲁棒优化和重定位策略研究
+      - 面向商用服务机器人的定位可靠性评估
+  challenges:
+    en:
+      - Long corridors and texture-poor walls
+      - Low-light environments
+      - Strong window light and high contrast
+      - Lobbies and open spaces
+      - Glass and reflective surfaces
+      - Repetitive textures and similar floors
+      - In-place turning and fast rotation
+      - Motion blur
+      - Dynamic occlusions from people and objects
+    zh:
+      - 长走廊与弱纹理墙面
+      - 低照度环境
+      - 窗边强光照反差
+      - 大堂及开放空间
+      - 玻璃与反光表面
+      - 重复纹理和相似楼层
+      - 原地转向及快速旋转
+      - 运动模糊
+      - 人员和其他物体的动态遮挡
+  image: ""
+  code_url: ""
+  paper_url: ""
+  project_url: ""
+  video_url: ""
+  stages: []
+
+- id: dynamic-scene-memory
+  status: ongoing
+  period: ""
+  baseline: ""
+  title:
+    en: Spatiotemporal Representation of Dynamic Scenes and Long-Term Memory for Embodied Robots
+    zh: 面向具身机器人的动态场景时空表征与长程记忆研究
+  summary:
+    en: >-
+      Ongoing research on how embodied robots can organize dynamic scene information
+      over time. The work covers dynamic 3D scene understanding, object identity
+      association, scene change and event representation, and the organization and
+      retrieval of long-term spatiotemporal memory. This research line is investigated
+      separately from the visual localization project; no unified validated system is claimed.
+    zh: "面向具身机器人的在研课题，研究动态场景信息在时间维度上的组织方式，涵盖动态三维场景理解、对象身份关联、场景变化及事件表征，以及长期时空记忆的组织与检索。该研究与视觉定位项目分别开展，不将两者表述为已完成的统一系统。"
+  application:
+    en: ""
+    zh: ""
+  highlights:
+    en:
+      - Dynamic 3D scene understanding
+      - Object identity association
+      - Scene change and event representation
+      - Long-term spatiotemporal memory organization and retrieval
+    zh:
+      - 动态三维场景理解
+      - 对象身份关联
+      - 场景变化及事件表征
+      - 长期时空记忆组织与检索
+  challenges:
+    en: []
+    zh: []
+  image: ""
+  code_url: ""
+  paper_url: ""
+  project_url: ""
+  video_url: ""
+  stages: []

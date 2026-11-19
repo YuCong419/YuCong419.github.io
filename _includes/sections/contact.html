@@ -1,0 +1,46 @@
+{%- assign github_handle = site.github_link | split: '/' | last -%}
+<section class="home-section" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">{{ t.sections.contact }}</h2>
+  <ul class="contact-list" role="list">
+    {% if site.email and site.email != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.email }}</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </li>
+    {% endif %}
+    {% if site.github_link and site.github_link != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.github }}</span>
+      <a href="{{ site.github_link }}" target="_blank" rel="noopener">{{ github_handle }}</a>
+    </li>
+    {% endif %}
+    {% if site.google_scholar and site.google_scholar != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.google_scholar }}</span>
+      <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">{{ t.labels.google_scholar }}</a>
+    </li>
+    {% endif %}
+    {% if site.orcid and site.orcid != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.orcid }}</span>
+      <a href="{{ site.orcid }}" target="_blank" rel="noopener">{{ t.labels.orcid }}</a>
+    </li>
+    {% endif %}
+    {% if site.linkedin and site.linkedin != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.linkedin }}</span>
+      <a href="{{ site.linkedin }}" target="_blank" rel="noopener">{{ t.labels.linkedin }}</a>
+    </li>
+    {% endif %}
+    {% if site.cv_link and site.cv_link != "" %}
+    <li>
+      <span class="contact-label">{{ t.labels.cv }}</span>
+      {% if site.cv_link contains '://' %}
+      <a href="{{ site.cv_link }}" target="_blank" rel="noopener">{{ t.labels.cv }}</a>
+      {% else %}
+      <a href="{{ site.cv_link | relative_url }}" target="_blank" rel="noopener">{{ t.labels.cv }}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+  </ul>
+</section>

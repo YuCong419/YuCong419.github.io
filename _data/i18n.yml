@@ -1,0 +1,116 @@
+# ==========================================
+# 界面文案（中英文）
+# 修改这里会影响所有页面的栏目名称与按钮文字。
+# ==========================================
+
+en:
+  html_lang: en
+  locale: en_US
+  sections:
+    about: About Me
+    research: Research Interests
+    projects: Selected Research Projects
+    milestones: Research Milestones
+    publications: Publications
+    education: Education
+    contact: Contact
+  labels:
+    skip_to_content: Skip to content
+    current_topic: Current research topic
+    period: Period
+    keywords: Keywords
+    language: Language
+    email: Email
+    github: GitHub
+    google_scholar: Google Scholar
+    orcid: ORCID
+    linkedin: LinkedIn
+    cv: Curriculum Vitae
+    code: Code
+    paper: Paper
+    pdf: PDF
+    arxiv: arXiv
+    project_page: Project Page
+    video: Video
+    related_link: Related link
+    baseline: Baseline
+    application: Target application
+    challenges: Challenge scenarios
+    stage_outcomes: Stage Outcomes
+    experiment_scene: Experimental scene
+    algorithm_version: Algorithm version
+    experiment_config: Experimental configuration
+    comparison_methods: Comparison methods
+    evaluation_metrics: Evaluation metrics
+    result_figure: Result figure
+    code_version: Code version
+    release: Release
+    repository: GitHub Repository
+    cv_description: CV summary
+  status:
+    ongoing: Ongoing Research
+    completed: Completed
+    exploratory: Exploratory Study
+  stage_categories:
+    baseline_evaluation: Baseline Evaluation
+    failure_case_analysis: Failure Case Analysis
+    frontend_improvements: Front-end Improvements
+    backend_relocalization: Back-end and Relocalization Improvements
+    robustness_experiments: Robustness Experiments
+    reproducible_release: Reproducible Research Release
+
+zh:
+  html_lang: zh-Hans
+  locale: zh_CN
+  sections:
+    about: 关于我
+    research: 研究方向
+    projects: 代表性科研项目
+    milestones: 科研阶段成果
+    publications: 学术论文
+    education: 教育经历
+    contact: 联系方式
+  labels:
+    skip_to_content: 跳到正文
+    current_topic: 当前研究课题
+    period: 时间
+    keywords: 关键词
+    language: 语言
+    email: 邮箱
+    github: GitHub
+    google_scholar: Google Scholar
+    orcid: ORCID
+    linkedin: LinkedIn
+    cv: 个人简历
+    code: 代码
+    paper: 论文
+    pdf: PDF
+    arxiv: arXiv
+    project_page: 项目主页
+    video: 视频
+    related_link: 相关链接
+    baseline: 技术基线
+    application: 目标应用
+    challenges: 困难场景
+    stage_outcomes: 阶段成果
+    experiment_scene: 实验场景
+    algorithm_version: 算法版本
+    experiment_config: 实验配置
+    comparison_methods: 对比方法
+    evaluation_metrics: 评估指标
+    result_figure: 结果图表
+    code_version: 代码版本
+    release: Release
+    repository: GitHub 仓库
+    cv_description: 简历描述
+  status:
+    ongoing: 在研
+    completed: 已完成
+    exploratory: 探索性实验
+  stage_categories:
+    baseline_evaluation: 基线评估
+    failure_case_analysis: 失败案例分析
+    frontend_improvements: 前端改进
+    backend_relocalization: 后端与重定位改进
+    robustness_experiments: 鲁棒性实验
+    reproducible_release: 可复现研究发布

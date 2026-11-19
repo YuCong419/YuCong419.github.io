@@ -1,0 +1,11 @@
+{%- assign projects = site.data.projects -%}
+{% if projects and projects.size > 0 %}
+<section class="home-section" id="projects" aria-labelledby="projects-title">
+  <h2 id="projects-title">{{ t.sections.projects }}</h2>
+  <div class="project-list">
+    {% for project in projects %}
+    {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

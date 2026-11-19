@@ -1,0 +1,162 @@
+<article class="project-card" id="project-{{ project.id }}">
+  {% if project.image and project.image != "" %}
+  {%- capture image_src -%}
+    {%- if project.image contains '://' -%}{{ project.image }}{%- else -%}{{ project.image | relative_url }}{%- endif -%}
+  {%- endcapture -%}
+  <figure class="project-media">
+    <img src="{{ image_src | strip }}" alt="{{ project.title[lang] }}" loading="lazy">
+  </figure>
+  {% endif %}
+
+  <div class="project-head">
+    <h3>{{ project.title[lang] }}</h3>
+    {% if project.status and project.status != "" %}
+    <span class="status-badge status-{{ project.status }}">{{ t.status[project.status] | default: project.status }}</span>
+    {% endif %}
+  </div>
+
+  {% if project.period and project.period != "" %}
+  <p class="project-period">{{ t.labels.period }}: {{ project.period }}</p>
+  {% endif %}
+
+  {% if project.baseline and project.baseline != "" or project.application[lang] and project.application[lang] != "" %}
+  <p class="project-meta">
+    {% if project.baseline and project.baseline != "" %}
+    <span class="project-meta-item"><span class="project-meta-label">{{ t.labels.baseline }}</span> {{ project.baseline }}</span>
+    {% endif %}
+    {% if project.application[lang] and project.application[lang] != "" %}
+    <span class="project-meta-item"><span class="project-meta-label">{{ t.labels.application }}</span> {{ project.application[lang] }}</span>
+    {% endif %}
+  </p>
+  {% endif %}
+
+  <p>{{ project.summary[lang] }}</p>
+
+  {% if project.highlights[lang] and project.highlights[lang].size > 0 %}
+  <ul class="project-highlights">
+    {% for highlight in project.highlights[lang] %}
+    <li>{{ highlight }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if project.challenges[lang] and project.challenges[lang].size > 0 %}
+  <div class="project-challenges">
+    <span class="project-challenges-label">{{ t.labels.challenges }}</span>
+    <ul class="keyword-list" role="list">
+      {% for challenge in project.challenges[lang] %}
+      <li>{{ challenge }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if project.stages and project.stages.size > 0 %}
+  <div class="project-stages">
+    <h4 class="project-stages-title">{{ t.labels.stage_outcomes }}</h4>
+    <ol class="stage-list" role="list">
+      {% for stage in project.stages %}
+      <li class="stage-item">
+        <div class="stage-head">
+          {% if stage.category and stage.category != "" %}
+          <span class="stage-category">{{ t.stage_categories[stage.category] | default: stage.category }}</span>
+          {% endif %}
+          {% if stage.date and stage.date != "" %}
+          <span class="stage-date">{{ stage.date }}</span>
+          {% endif %}
+        </div>
+        {% if stage.title[lang] and stage.title[lang] != "" %}
+        <h5>{{ stage.title[lang] }}</h5>
+        {% endif %}
+        {% if stage.summary[lang] and stage.summary[lang] != "" %}
+        <p>{{ stage.summary[lang] }}</p>
+        {% endif %}
+
+        {%- assign has_stage_meta = false -%}
+        {%- if stage.scene[lang] and stage.scene[lang] != "" -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {%- if stage.algorithm_version and stage.algorithm_version != "" -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {%- if stage.config and stage.config != "" -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {%- if stage.baselines and stage.baselines.size > 0 -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {%- if stage.metrics and stage.metrics.size > 0 -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {%- if stage.code_version and stage.code_version != "" -%}{%- assign has_stage_meta = true -%}{%- endif -%}
+        {% if has_stage_meta %}
+        <dl class="stage-meta">
+          {% if stage.scene[lang] and stage.scene[lang] != "" %}
+          <dt>{{ t.labels.experiment_scene }}</dt><dd>{{ stage.scene[lang] }}</dd>
+          {% endif %}
+          {% if stage.algorithm_version and stage.algorithm_version != "" %}
+          <dt>{{ t.labels.algorithm_version }}</dt><dd>{{ stage.algorithm_version }}</dd>
+          {% endif %}
+          {% if stage.config and stage.config != "" %}
+          <dt>{{ t.labels.experiment_config }}</dt><dd>{{ stage.config }}</dd>
+          {% endif %}
+          {% if stage.baselines and stage.baselines.size > 0 %}
+          <dt>{{ t.labels.comparison_methods }}</dt><dd>{{ stage.baselines | join: ", " }}</dd>
+          {% endif %}
+          {% if stage.metrics and stage.metrics.size > 0 %}
+          <dt>{{ t.labels.evaluation_metrics }}</dt><dd>{{ stage.metrics | join: ", " }}</dd>
+          {% endif %}
+          {% if stage.code_version and stage.code_version != "" %}
+          <dt>{{ t.labels.code_version }}</dt><dd>{{ stage.code_version }}</dd>
+          {% endif %}
+        </dl>
+        {% endif %}
+
+        {% if stage.figure and stage.figure != "" %}
+        {%- capture stage_figure_src -%}
+          {%- if stage.figure contains '://' -%}{{ stage.figure }}{%- else -%}{{ stage.figure | relative_url }}{%- endif -%}
+        {%- endcapture -%}
+        <figure class="stage-figure">
+          <img src="{{ stage_figure_src | strip }}" alt="{{ t.labels.result_figure }}" loading="lazy">
+        </figure>
+        {% endif %}
+
+        {%- assign has_stage_links = false -%}
+        {%- if stage.video_url and stage.video_url != "" -%}{%- assign has_stage_links = true -%}{%- endif -%}
+        {%- if stage.repo_url and stage.repo_url != "" -%}{%- assign has_stage_links = true -%}{%- endif -%}
+        {%- if stage.release_url and stage.release_url != "" -%}{%- assign has_stage_links = true -%}{%- endif -%}
+        {% if has_stage_links %}
+        <div class="stage-links">
+          {% if stage.video_url and stage.video_url != "" %}
+          <a href="{{ stage.video_url }}" target="_blank" rel="noopener">{{ t.labels.video }}</a>
+          {% endif %}
+          {% if stage.repo_url and stage.repo_url != "" %}
+          <a href="{{ stage.repo_url }}" target="_blank" rel="noopener">{{ t.labels.repository }}</a>
+          {% endif %}
+          {% if stage.release_url and stage.release_url != "" %}
+          <a href="{{ stage.release_url }}" target="_blank" rel="noopener">{{ t.labels.release }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if stage.cv_description[lang] and stage.cv_description[lang] != "" %}
+        <p class="stage-cv"><span class="project-meta-label">{{ t.labels.cv_description }}</span> {{ stage.cv_description[lang] }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+
+  {%- assign has_links = false -%}
+  {%- if project.code_url and project.code_url != "" -%}{%- assign has_links = true -%}{%- endif -%}
+  {%- if project.paper_url and project.paper_url != "" -%}{%- assign has_links = true -%}{%- endif -%}
+  {%- if project.project_url and project.project_url != "" -%}{%- assign has_links = true -%}{%- endif -%}
+  {%- if project.video_url and project.video_url != "" -%}{%- assign has_links = true -%}{%- endif -%}
+  {% if has_links %}
+  <div class="project-links">
+    {% if project.code_url and project.code_url != "" %}
+    <a href="{{ project.code_url }}" target="_blank" rel="noopener">{{ t.labels.code }}</a>
+    {% endif %}
+    {% if project.paper_url and project.paper_url != "" %}
+    <a href="{{ project.paper_url }}" target="_blank" rel="noopener">{{ t.labels.paper }}</a>
+    {% endif %}
+    {% if project.project_url and project.project_url != "" %}
+    <a href="{{ project.project_url }}" target="_blank" rel="noopener">{{ t.labels.project_page }}</a>
+    {% endif %}
+    {% if project.video_url and project.video_url != "" %}
+    <a href="{{ project.video_url }}" target="_blank" rel="noopener">{{ t.labels.video }}</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</article>

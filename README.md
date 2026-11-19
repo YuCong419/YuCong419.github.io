@@ -1,3 +1,16 @@
+# Yu Cong — Academic Homepage
+
+[English](/) | [中文](/zh/)
+
+This repository contains the source of Yu Cong's bilingual academic homepage, built on the
+[Minimal Light](https://github.com/yaoyao-liu/minimal-light) theme.
+
+For day-to-day content updates (projects, milestones, publications, profile, avatar),
+see **[MAINTENANCE.md](MAINTENANCE.md)** (in Chinese). The sections below are the original
+theme documentation, kept for attribution and reference.
+
+---
+
 # The Minimal Light Theme
 
 \[[Demo the theme](https://minimal-light-theme.yliu.me/)\]  \[[简体中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hans.md) | [繁體中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hant.md) | [Deutsche](https://github.com/yaoyao-liu/minimal-light/blob/master/README_de.md)\]

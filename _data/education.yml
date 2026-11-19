@@ -1,0 +1,14 @@
+# ==========================================
+# 教育经历
+# 未确认的信息（如本科经历、具体时间）请保持留空。
+# period 为空时不会显示。
+# ==========================================
+
+- institution:
+    en: Soochow University
+    zh: 苏州大学
+  degree:
+    en: Master's Student in Control Engineering
+    zh: 控制工程专业硕士研究生
+  period: ""
+  note: ""

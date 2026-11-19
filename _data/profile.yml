@@ -1,0 +1,50 @@
+# ==========================================
+# 个人基本信息与简介
+# 中英文写在同一条记录里，保持同步更新。
+# ==========================================
+
+name:
+  en: Yu Cong
+  zh: 于聪
+
+# 在另一个语言版本中显示的名字
+name_alt:
+  en: 于聪
+  zh: Yu Cong
+
+position:
+  en: Master's Student in Control Engineering
+  zh: 控制工程专业硕士研究生
+
+affiliation:
+  en: Soochow University, China
+  zh: 苏州大学
+
+affiliation_url: https://www.suda.edu.cn/
+
+# About Me：每个列表项是一个段落，支持 Markdown 行内语法。
+about:
+  en:
+    - >-
+      I am a Master's student in Control Engineering at Soochow University, China.
+      My research interests lie in robot perception, visual SLAM, spatial intelligence,
+      and long-term spatiotemporal memory for embodied robots.
+    - >-
+      My current work focuses on robust visual localization for autonomous service robots,
+      using ORB-SLAM3 as a baseline. I am investigating localization challenges in complex
+      indoor environments, including texture-poor corridors, challenging illumination,
+      motion blur, repetitive structures, and dynamic occlusions, with commercial cleaning
+      robots as a target application.
+    - >-
+      I am also interested in dynamic 3D scene understanding and long-term memory
+      mechanisms that enable embodied robots to maintain and utilize spatial information
+      over time.
+  zh:
+    - "我是苏州大学控制工程专业硕士研究生，研究兴趣包括机器人感知、视觉 SLAM、空间智能，以及面向具身机器人的长期时空记忆。"
+    - "目前的工作聚焦于面向自主服务机器人的鲁棒视觉定位，以 ORB-SLAM3 作为技术基线，研究复杂室内环境中的定位挑战，包括弱纹理走廊、复杂光照、运动模糊、重复结构和动态遮挡，并以商用清洁机器人作为目标应用场景。"
+    - "同时，我也关注动态三维场景理解与长期记忆机制，使具身机器人能够在长时间尺度上维护并利用空间信息。"
+
+# 当前研究课题（会显示在 About Me 下方）
+current_topic:
+  en: "Robust Visual Localization for Commercial Cleaning Robots"
+  zh: "面向商用清洁机器人的鲁棒视觉定位研究"

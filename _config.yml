@@ -6,48 +6,50 @@
 
 # Basic Information
 title: Yu Cong
-position: M.Eng. Student in Control Engineering
-affiliation: Soochow University, China
+url: "https://yucong419.github.io"
+baseurl: ""
+lang: en
 
-# 请替换为你希望公开的学术邮箱
+# 公开学术邮箱
 email: yc1683654@gmail.com
 
 # Search Engine Optimization (SEO)
 keywords: >-
   Yu Cong, Soochow University, Robotics,
-  Embodied AI, Robot Perception,
-  Visual SLAM, Semantic SLAM,
-  3D Scene Graph, Scene Understanding,
-  Spatiotemporal Memory,
-  Long-term Robot Memory,
+  Robust Visual Localization, Visual SLAM,
+  Service Robots, Commercial Cleaning Robots,
+  Robot Perception, Embodied AI,
+  Semantic SLAM, 3D Scene Graph, Scene Understanding,
+  Spatiotemporal Memory, Long-term Robot Memory,
   Dynamic Environments
 
 description: >-
   Yu Cong is a Master's student in Control
   Engineering at Soochow University, China.
-  His research focuses on embodied AI,
-  robot perception, 3D scene understanding,
-  dynamic scene representation,
+  His research focuses on robust visual localization
+  for service robots, robot perception,
+  spatial intelligence, dynamic scene representation,
   and long-term spatiotemporal memory
-  for autonomous mobile robots.
+  for embodied robots.
 
-canonical: https://yucong419.github.io/
+# canonical / hreflang 由 _layouts/homepage.html 根据页面语言自动生成
 
 # Academic and Social Links
+# 留空字符串即隐藏对应图标；确认后再填写。
 github_link: https://github.com/YuCong419
-
-# 暂无对应账号或文件时，不启用以下链接
-# google_scholar:
-# cv_link:
-# linkedin:
-# twitter:
+google_scholar: ""
+orcid: ""
+cv_link: ""
+linkedin: ""
+twitter: ""
 
 # Profile Images
-# 后续替换为你自己的头像
-avatar: ./assets/img/avatar.png
+# 头像留空时不显示图片；可填站内路径（如 /assets/img/avatar.png）或外部 URL。
+# 注意：任何公开显示的头像都能被网页访问者获取。
+avatar: ""
 
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+favicon: /assets/img/favicon.png
+favicon_dark: /assets/img/favicon-dark.png
 
 # Website Appearance
 enable_footnote: true
@@ -69,6 +71,6 @@ exclude:
   - README_zh_Hant.md
   - README_de.md
   - LICENSE
+  - MAINTENANCE.md
   - minimal-light.gemspec
-  - html_source_file/
 

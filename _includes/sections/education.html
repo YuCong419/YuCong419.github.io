@@ -1,0 +1,20 @@
+{%- assign education = site.data.education -%}
+{% if education and education.size > 0 %}
+<section class="home-section" id="education" aria-labelledby="education-title">
+  <h2 id="education-title">{{ t.sections.education }}</h2>
+  <ul class="education-list" role="list">
+    {% for item in education %}
+    <li class="education-item">
+      <h3>{{ item.institution[lang] }}</h3>
+      <p class="education-degree">{{ item.degree[lang] }}</p>
+      {% if item.period and item.period != "" %}
+      <p class="education-period">{{ item.period }}</p>
+      {% endif %}
+      {% if item.note and item.note != "" %}
+      <p class="education-note">{{ item.note }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

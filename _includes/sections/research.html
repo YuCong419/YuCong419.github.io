@@ -1,0 +1,21 @@
+{%- assign research_areas = site.data.research -%}
+{% if research_areas and research_areas.size > 0 %}
+<section class="home-section" id="research" aria-labelledby="research-title">
+  <h2 id="research-title">{{ t.sections.research }}</h2>
+  <div class="research-grid">
+    {% for area in research_areas %}
+    <article class="research-card">
+      <h3>{{ area.title[lang] }}</h3>
+      <p>{{ area.summary[lang] }}</p>
+      {% if area.keywords[lang] and area.keywords[lang].size > 0 %}
+      <ul class="keyword-list" role="list" aria-label="{{ t.labels.keywords }}">
+        {% for keyword in area.keywords[lang] %}
+        <li>{{ keyword }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
